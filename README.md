@@ -1,2 +1,3 @@
-# k2goDataBase
-Kidney2Go
+# K2GoDataBase
+
+A description of this package.
