@@ -8,7 +8,7 @@
 import UIKit
 import RealmSwift
 
-class K2GoCourseChain: Object, Decodable {
+public class K2GoCourseChain: Object, Decodable {
     
     @Persisted public var title: String = ""
     @Persisted public var parentName: String?
