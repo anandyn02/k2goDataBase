@@ -3,7 +3,7 @@ import Foundation
 import RealmSwift
 
 public struct RealmManager {
-    static func setup() {
+    public static func setup() {
         Realm.Configuration.defaultConfiguration = Realm.Configuration(
             inMemoryIdentifier: "K2GO",
             schemaVersion: 1,
