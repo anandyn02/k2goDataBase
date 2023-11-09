@@ -16,7 +16,7 @@ public class K2GoPageContent: Object, Decodable {
     @objc public dynamic var coursemodule: Int = 0
     @objc public dynamic var courseId: Int = 0
     @objc public dynamic var content: String = ""
-    public dynamic var contentfiles: List<K2GoPageFile>
+    public dynamic var contentfiles = List<K2GoPageFile>()
     //[K2GoPageFile]? = []
 
     public override static func primaryKey() -> String? { return "id" }
@@ -25,8 +25,8 @@ public class K2GoPageContent: Object, Decodable {
 
 public class K2GoPageFile: Object, Decodable {
     
-    @objc public dynamic var filename: String = ""
-    @objc public dynamic var fileurl: String = ""
-    @objc public dynamic var mimetype: String = ""
+    @Persisted public var filename: String = ""
+    @Persisted public var fileurl: String = ""
+    @Persisted public var mimetype: String = ""
     
 }
