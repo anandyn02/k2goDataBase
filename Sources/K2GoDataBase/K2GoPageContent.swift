@@ -9,24 +9,23 @@ import UIKit
 import RealmSwift
 import Realm
 
-class K2GoPageContent: Object, Decodable {
+public class K2GoPageContent: Object, Decodable {
 
-    @objc dynamic var name: String = ""
-    @objc dynamic var id: Int = 0
-    @objc dynamic var coursemodule: Int = 0
-    @objc dynamic var course: Int = 0
-    @objc dynamic var content: String = ""
+    @objc public dynamic var name: String = ""
+    @objc public dynamic var id: Int = 0
+    @objc public dynamic var coursemodule: Int = 0
+    @objc public dynamic var course: Int = 0
+    @objc public dynamic var content: String = ""
+    @objc public dynamic var contentfiles:[K2GoPageFile]? = []
 
-    @objc dynamic var contentfiles:[K2GoPageFile]? = []
-
-    override static func primaryKey() -> String? { return "id" }
+    public override static func primaryKey() -> String? { return "id" }
 
 }
 
-class K2GoPageFile: Object, Decodable {
+public class K2GoPageFile: Object, Decodable {
     
-    @objc dynamic var filename: String = ""
-    @objc dynamic var fileurl: String = ""
-    @objc dynamic var mimetype: String = ""
+    @objc public dynamic var filename: String = ""
+    @objc public dynamic var fileurl: String = ""
+    @objc public dynamic var mimetype: String = ""
     
 }
