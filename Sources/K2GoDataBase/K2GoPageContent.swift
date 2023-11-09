@@ -11,12 +11,12 @@ import Realm
 
 public class K2GoPageContent: Object, Decodable {
 
-    @Persisted public var name: String = ""
-    @Persisted public var id: Int = 0
-    @Persisted public var coursemodule: Int = 0
-    @Persisted public var courseId: Int = 0
-    @Persisted public var content: String = ""
-    @Persisted public var contentfiles = List<K2GoPageFile>()
+    @objc dynamic public var name: String = ""
+    @objc dynamic public var id: Int = 0
+    @objc dynamic public var coursemodule: Int = 0
+    @objc dynamic public var courseId: Int = 0
+    @objc dynamic public var content: String = ""
+     public var contentfiles = List<K2GoPageFile>()
     //[K2GoPageFile]? = []
 
     public override static func primaryKey() -> String? { return "id" }
