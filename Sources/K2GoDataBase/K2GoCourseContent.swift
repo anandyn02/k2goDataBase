@@ -13,8 +13,7 @@ public class K2GoCourseContent: Object, Decodable {
     @objc dynamic public var name: String = ""
     @objc dynamic public var id: Int = 0
     @objc dynamic public var visible: Int = 0
-    @objc dynamic public var summary: Int = 0
-    @objc dynamic public var content: String = ""
+    @objc dynamic public var summary: String = ""
 
     public var modules = List<K2GoCourseModule>()
 
