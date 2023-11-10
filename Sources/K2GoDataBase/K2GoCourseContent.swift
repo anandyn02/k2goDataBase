@@ -31,6 +31,10 @@ public class K2GoCourseModule: Object, Decodable {
     @Persisted public var name: String = ""
     @Persisted public var visible: Int = 0
     @Persisted public var contextid: Int = 0
+    
+    public var isSelected: Bool = false
+    public var isHighLighted: Bool = false
+    public var pageContent: K2GoPageContent?
 }
 
 public class  K2GoTopic: Object, Decodable  {
