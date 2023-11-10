@@ -34,7 +34,7 @@ public class K2GoCourseModule: Object, Decodable {
     
     public var isSelected: Bool = false
     public var isHighLighted: Bool = false
-    public var pageContent: K2GoPageContent?
+    @Persisted public var pageContent: K2GoPageContent?
 }
 
 public class  K2GoTopic: Object, Decodable  {
