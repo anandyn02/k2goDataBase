@@ -20,8 +20,8 @@ public class K2GoPageContent: Object, Decodable {
 
     public var contentfiles = List<K2GoPageFile>()
     public var regularContent: String = ""
-    public var images: [String] = []
-    public var videos: [String] = []
+    public var images = List<String>()
+    public var videos = List<String>()
 
     //[K2GoPageFile]? = []
 
