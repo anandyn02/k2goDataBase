@@ -24,13 +24,13 @@ public class K2GoPageContent: Object, Decodable {
     public var videos = List<String>()
 
     
-    var searchText: String = "" {
+    public var searchText: String = "" {
         didSet {
             updateSearchText()
         }
     }
     
-   private(set) var searchResult: String = ""
+   private(set) public var searchResult: String = ""
 
     //[K2GoPageFile]? = []
 
