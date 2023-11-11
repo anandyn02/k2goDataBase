@@ -17,11 +17,11 @@ public class K2GoPageContent: Object, Decodable {
     @objc dynamic public var courseId: Int = 0
     @objc dynamic public var content: String = ""
     @objc dynamic public var contentData: Data?
+    @objc dynamic public var regularContent: String = ""
 
     public var contentfiles = List<K2GoPageFile>()
     public var images = List<String>()
     public var videos = List<String>()
-    public var regularContent: String = ""
 
     
     var searchText: String = "" {
