@@ -19,9 +19,18 @@ public class K2GoPageContent: Object, Decodable {
     @objc dynamic public var contentData: Data?
 
     public var contentfiles = List<K2GoPageFile>()
-    public var regularContent: String = ""
     public var images = List<String>()
     public var videos = List<String>()
+    public var regularContent: String = ""
+
+    
+    var searchText: String = "" {
+        didSet {
+            updateSearchText()
+        }
+    }
+    
+   private(set) var searchResult: String = ""
 
     //[K2GoPageFile]? = []
 
@@ -42,6 +51,9 @@ public class K2GoPageContent: Object, Decodable {
         }
     }
     
+    public func updateSearchText() {
+        searchResult = regularContent.k2GoSpotSearchText(searchText) ?? ""
+    }
     
    public func convertIntoAttributeString() {
         
