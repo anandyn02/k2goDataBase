@@ -20,10 +20,27 @@ public class K2GoPageContent: Object, Decodable {
 
     public var contentfiles = List<K2GoPageFile>()
     public var regularContent: String = ""
+    public var images: [String] = []
+    public var videos: [String] = []
 
     //[K2GoPageFile]? = []
 
     public override static func primaryKey() -> String? { return "id" }
+    
+    public func updateFileContent() {
+        
+        images.removeAll()
+        videos.removeAll()
+        
+        for fle in contentfiles {
+            if fle.mimetype == "image/png" ||  fle.mimetype == "image/jpg" {
+                images.append(fle.fileurl)
+            }
+            else if fle.mimetype == "video/mp4" {
+                videos.append(fle.fileurl)
+            }
+        }
+    }
     
     
    public func convertIntoAttributeString() {
