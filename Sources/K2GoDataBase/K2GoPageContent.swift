@@ -16,9 +16,9 @@ public class K2GoPageContent: Object, Decodable {
     @objc dynamic public var coursemodule: Int = 0
     @objc dynamic public var courseId: Int = 0
     @objc dynamic public var content: String = ""
-    
+    @objc dynamic public var contentData: Data?
+
     public var contentfiles = List<K2GoPageFile>()
-    public var contentData: Data?
     public var regularContent: String = ""
 
     //[K2GoPageFile]? = []
