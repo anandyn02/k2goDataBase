@@ -22,6 +22,10 @@ public class K2GoPageContent: Object, Decodable {
     public var contentfiles = List<K2GoPageFile>()
     public var images = List<String>()
     public var videos = List<String>()
+    
+    @objc dynamic public var parentName: String?
+    @objc dynamic public var parentId: Int = 0
+    @objc dynamic public var fullPath: String?
 
     
     public var searchText: String = "" {
