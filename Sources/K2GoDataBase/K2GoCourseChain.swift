@@ -17,8 +17,9 @@ public class K2GoCourseChain: Object, Decodable {
     @Persisted public var childrens = List<K2GoCourseChain>()
     @Persisted public var favoriteId: Int = 0
     @Persisted public var isUpdated: Bool = false
+    @Persisted public var id: String = ""
 
-    public override static func primaryKey() -> String? { return "title" }
+    public override static func primaryKey() -> String? { return "id" }
 
     public var isExpended: Bool = false
 
