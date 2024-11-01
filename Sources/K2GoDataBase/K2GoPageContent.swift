@@ -10,8 +10,8 @@ import RealmSwift
 import Realm
 
 public struct TextContentPage {
-    let text: String
-    let url: String
+    public let text: String
+    public let url: String
 }
 
 public class  K2GoTextContentPage: Object, Decodable {
