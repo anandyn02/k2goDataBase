@@ -9,6 +9,16 @@ import UIKit
 import RealmSwift
 import Realm
 
+public struct TextContentPage {
+    let text: String
+    let url: String
+}
+
+public class  K2GoTextContentPage: Object, Decodable {
+    @objc dynamic public var text: String = ""
+    @objc dynamic public var url: String = ""
+}
+
 public class K2GoPageContent: Object, Decodable {
 
     @objc dynamic public var name: String = ""
@@ -22,6 +32,7 @@ public class K2GoPageContent: Object, Decodable {
     public var contentfiles = List<K2GoPageFile>()
     public var images = List<String>()
     public var videos = List<String>()
+    public var textContent = List<K2GoTextContentPage>()
     
     @objc dynamic public var parentName: String?
     @objc dynamic public var parentId: Int = 0
@@ -52,6 +63,15 @@ public class K2GoPageContent: Object, Decodable {
             else if fle.mimetype == "video/mp4" {
                 videos.append(fle.fileurl)
             }
+        }
+    }
+    
+    public func updateTextContent(list: [TextContentPage]) {
+        
+        for i in list {
+            let info = ["text": i.text, "url": i.url]
+            let contentPage = K2GoTextContentPage(value: info)
+            textContent.append(contentPage)
         }
     }
     
