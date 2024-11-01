@@ -10,6 +10,8 @@ import RealmSwift
 import Realm
 
 public struct TextContentPage {
+    public init() {}
+    
     public var text: String = ""
     public var url: String = ""
 }
