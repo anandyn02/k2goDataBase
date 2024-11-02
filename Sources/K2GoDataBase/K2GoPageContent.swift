@@ -94,6 +94,19 @@ public class K2GoPageContent: Object, Decodable {
         }
     }
     
+    public func saveContentData(text: String) {
+        
+        if let attributedString = text.k2GoConvertToAttributedString {
+            do {
+                let data = try NSKeyedArchiver.archivedData(withRootObject: attributedString, requiringSecureCoding: false)
+                contentData = data
+            }
+            catch {
+                print("error encoding")
+            }
+        }
+    }
+    
     public func convertHtmlToRegular() {
         let str = content.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
         regularContent = str
