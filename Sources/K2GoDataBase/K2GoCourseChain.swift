@@ -22,6 +22,6 @@ public class K2GoCourseChain: Object, Decodable {
     public override static func primaryKey() -> String? { return "id" }
 
     public var isExpended: Bool = false
-    public var visible: Bool = false
+    public var visible: Int = 0
 
 }
